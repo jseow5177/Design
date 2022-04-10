@@ -1,0 +1,41 @@
+@use "../../index.scss";
+
+.dropdown {
+  position: relative;
+  cursor: default;
+
+  .dropdownItems {
+    background-color: index.$colorWhite;
+    box-shadow: 0px 8px 16px 0px rgba(index.$colorBlack, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    z-index: 1;
+    margin-top: 0.25rem;
+    overflow-y: auto;
+
+    .dropdownItem {
+      display: flex;
+      justify-content: flex-start;
+      padding: 1rem;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(index.$colorGreen, 0.4);
+      }
+
+      &.selected {
+        color: index.$colorWhite;
+        background-color: index.$colorGreen;
+      }
+    }
+  }
+
+  .selectIcon {
+    color: index.$colorGrey;
+  }
+}

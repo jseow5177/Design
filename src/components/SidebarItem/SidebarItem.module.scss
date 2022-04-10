@@ -1,0 +1,60 @@
+@use "../../index";
+
+.link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.1rem;
+  position: relative;
+  transition: all 150ms linear;
+
+  // icon
+  span {
+    margin-right: 0.3rem;
+    transition: transform 100ms ease-in-out;
+  }
+
+  // border
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: index.$colorOrange;
+    width: 0.5rem;
+    height: 0;
+    left: 0;
+    top: 0;
+  }
+
+  &:hover {
+    &:before {
+      height: 100%;
+    }
+  }
+}
+
+.active {
+  background-color: index.$colorOrange;
+}
+
+.indentLeft {
+  padding-left: 2.5rem; /* 2.5 + 1 */
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100%;
+}

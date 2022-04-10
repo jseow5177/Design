@@ -1,0 +1,45 @@
+@use "../../index.scss";
+
+.startIcon,
+.endIcon {
+  display: flex;
+}
+
+.startIcon {
+  margin-left: 14px;
+}
+
+.endIcon {
+  margin-right: 14px;
+}
+
+.input {
+  border: 0;
+  color: rgba(index.$colorBlack, 0.87);
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+  width: 100%;
+  resize: none;
+
+  &.small {
+    padding: 8.5px 14px;
+  }
+
+  &.medium {
+    padding: 16.5px 14px;
+  }
+
+  &::placeholder {
+    color: index.$colorMediumGrey;
+  }
+
+  &:read-only {
+    cursor: default;
+  }
+
+  &:disabled {
+    background-color: inherit;
+  }
+}

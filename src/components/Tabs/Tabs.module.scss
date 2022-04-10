@@ -1,0 +1,69 @@
+@use "../../index";
+
+.tabsWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .body {
+    transition: height 150ms ease-in-out;
+
+    &.shrink {
+      height: 0;
+      overflow: hidden;
+    }
+
+    &.expand {
+      overflow: auto;
+    }
+
+    .tabPanel {
+      padding: 1rem 2rem;
+    }
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    background-color: index.$colorGreen;
+    padding-right: 0.5rem;
+    width: 100%;
+
+    .tabs {
+      width: fit-content;
+      position: relative;
+      color: index.$colorLightGrey;
+      margin-right: 1rem;
+
+      .tab {
+        padding: 0.6rem 2rem;
+        position: relative;
+
+        &.active {
+          color: index.$colorWhite;
+        }
+      }
+
+      .highlight {
+        background-color: index.$colorOrange;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 5px;
+        transition: transform 150ms linear;
+      }
+    }
+
+    .arrowIcon {
+      color: index.$colorWhite;
+      transition: transform 100ms linear;
+
+      &.rotate {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

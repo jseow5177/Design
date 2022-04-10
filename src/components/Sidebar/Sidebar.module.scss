@@ -1,0 +1,31 @@
+@use "../../index";
+
+.sidebar {
+  background-color: index.$colorGreen;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: index.$colorWhite;
+  width: 0;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: width 150ms ease-in-out;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 0.5rem;
+  }
+}
+
+.open {
+  width: 250px;
+}

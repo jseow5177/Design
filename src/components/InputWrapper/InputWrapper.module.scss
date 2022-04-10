@@ -1,0 +1,87 @@
+@use "../../index.scss";
+
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  width: 30ch; // 30 character width
+
+  &.fullWidth {
+    width: 100%;
+  }
+
+  .label {
+    font-size: 1.1rem;
+    margin: 0.25rem;
+    margin-top: 0;
+    color: index.$colorDarkGrey;
+
+    &.focus {
+      color: index.$colorGreen;
+    }
+
+    &.error {
+      color: index.$colorRed;
+    }
+
+    &.disabled {
+      color: index.$colorGrey;
+    }
+  }
+
+  .inputWrapper {
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    outline: index.$colorMediumGrey solid 1px;
+
+    &.none {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.dense {
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    &.normal {
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    &:hover:not(.error, .focus, .disabled) {
+      outline-color: index.$colorDarkGrey;
+    }
+
+    &.focus {
+      outline: index.$colorGreen solid 2px;
+    }
+
+    &.error {
+      outline-color: index.$colorRed;
+    }
+
+    &.disabled {
+      outline-color: index.$colorLightGrey;
+      background-color: index.$colorVeryLightGrey;
+    }
+  }
+
+  .helperText {
+    color: index.$colorDarkGrey;
+    font-size: 0.75rem;
+    text-align: left;
+    line-height: 1.66;
+    letter-spacing: 0.03333em;
+    margin: 0.25rem;
+    margin-bottom: 0;
+
+    &.error {
+      color: index.$colorRed;
+    }
+
+    &.disabled {
+      color: index.$colorGrey;
+    }
+  }
+}

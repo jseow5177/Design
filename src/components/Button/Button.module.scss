@@ -1,0 +1,89 @@
+@use "../../index.scss";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  min-width: 64px;
+
+  &.contained {
+    background-color: index.$colorGreen;
+    color: index.$colorWhite;
+
+    &.elevation {
+      box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+        0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    }
+
+    &.disabled {
+      background-color: index.$colorLightGrey;
+      color: index.$colorGrey;
+      box-shadow: none;
+    }
+  }
+
+  &.outlined {
+    color: index.$colorGreen;
+    border: 1px solid index.$colorGreen;
+
+    &.disabled {
+      color: index.$colorGrey;
+      border: 1px solid index.$colorLightGrey;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(index.$colorGreen, 0.09);
+    }
+  }
+
+  &.text {
+    color: index.$colorGreen;
+
+    &.disabled {
+      color: index.$colorGrey;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: rgba(index.$colorGreen, 0.09);
+    }
+  }
+
+  &.small {
+    padding: 4px 10px;
+  }
+
+  &.medium {
+    padding: 6px 16px;
+  }
+
+  &.large {
+    padding: 8px 22px;
+  }
+
+  &.disabled {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &.active {
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .startIcon,
+  .endIcon {
+    display: inline-flex;
+  }
+
+  .startIcon {
+    margin-right: 6px;
+  }
+
+  .endIcon {
+    margin-left: 6px;
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../index";
+
+.footer {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  color: index.$colorGrey;
+  font-size: 0.9rem;
+  padding: 1.2rem 0;
+}
